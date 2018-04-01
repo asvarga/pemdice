@@ -7,6 +7,23 @@ EQ, AS, NEG, MD, RT, MID, LF, JUX, PAR, CON, INT, FRA = range(12)
 
 Arity = [2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 0]
 
+LT, EQ, GT = -1, 0, 1
+
+LIMS = [
+	[(GT, EQ), (GT, EQ)],
+	[(GT, AS), (GT, NEG)],
+	[(GT, NEG)],
+	[(GT, MD), (GT, MD)],
+	[(GT, RT)],
+	[(GT, MID), (GT, MID)],
+	[(GT, LF)],
+	[(GT, PAR), (EQ, PAR)],
+	[(PAR)], ## more than in
+	[(EQ, INT), (GT, PAR)],
+	[],
+	[]
+]
+
 DICE = {
 	'-': NEG,
 	'+': AS, #'-': AS,
