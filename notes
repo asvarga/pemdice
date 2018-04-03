@@ -1,11 +1,8 @@
+
 Easy versions:
 - Get just first skeleton
 - No parens
   - Forces strictly increasing precedence 
-
-Fix LIMS:
-- Change many GTs to GTEs
-- Change '(PAR)' to 'PAR'
 
 Ideas:
 - Maybe 
@@ -18,3 +15,8 @@ Ideas:
 - Can split number concatenation into its own loops
   - NOT including unary negation, because it can negate an expression (-4^2 = -16, not 16)
 - Bring jux handling to outer loop
+
+
+- A lot of this depends on assumptions like
+  - exactly 1 set of parentheses
+  - other limits on dice
