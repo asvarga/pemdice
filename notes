@@ -1,0 +1,20 @@
+Easy versions:
+- Get just first skeleton
+- No parens
+  - Forces strictly increasing precedence 
+
+Fix LIMS:
+- Change many GTs to GTEs
+- Change '(PAR)' to 'PAR'
+
+Ideas:
+- Maybe 
+  - outer loop first splits into 3 parts
+    - Right of =
+    - Left of = inside parens
+    - Left of = outside parens
+  - Then each part has strictly increasing precedence
+- Can also group ops based on arity to allow efficient splitting
+- Can split number concatenation into its own loops
+  - NOT including unary negation, because it can negate an expression (-4^2 = -16, not 16)
+- Bring jux handling to outer loop
